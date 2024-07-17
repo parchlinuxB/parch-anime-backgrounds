@@ -1,18 +1,17 @@
 # Maintainer: Parch Linux Distribution Team <feedback@parchlinux.ir>
 
-pkgname=parch-nature-backgrounds
+pkgname=parch-anime-backgrounds
 pkgver=1.0
 pkgrel=1
-pkgdesc='Parch Linux nature Wallpapers'
+pkgdesc='Parch Linux anime Wallpapers'
 arch=('any')
-url="https://github.com/parchlinuxb/nature-backgrounds"
+url="https://github.com/parchlinuxb/anime-backgrounds"
 license=('GPL')
-source=("wallpapers.zip")
+source=("build.zip")
 sha256sums=('SKIP')
 
 package() {
-    cd "wallpapers"
-    install -d "${pkgdir}/usr/share/wallpapers/parch-nature/"
-    install -Dm 644 *.jpg "${pkgdir}/usr/share/wallpapers/parch-nature/"
-    install -Dm 644 parch-nature.xml "${pkgdir}/usr/share/gnome-background-properties/parch-nature.xml"
+    install -d "${pkgdir}/usr/share/wallpapers/parch-anime/"
+    install -Dm 644 *.jpg "${pkgdir}/usr/share/wallpapers/parch-anime/"
+    install -Dm 644 parch-anime.xml "${pkgdir}/usr/share/gnome-background-properties/parch-anime.xml"
 }
