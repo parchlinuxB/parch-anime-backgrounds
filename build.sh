@@ -6,10 +6,11 @@ convertimages(){
     count=0
     for file in "$images_dir"/*.{jpg,jpeg,png}; do
         extension=$(basename "$file" | awk -F. '{if (NF>1) {print $NF}}')
+        destination="$build_dir"/anime-"$count".jpg
         if [[ "$extension" != "jpg" ]]; then
-            magick "$file" "$build_dir"/"$count".jpg
+            magick "$file" $destination
         else
-            cp "$file" "$build_dir"/"$count".jpg
+            cp "$file" $destination
         fi
         count=$(( count + 1 ))
     done
